@@ -13,7 +13,7 @@
         :open-url="url('products/{id}')" :toggle-url="$sup ? url('products/{id}/toggle') : null" search="Search code, name, location..." row-tone="tone"
         :columns="array_values(array_filter([
             ['key' => 'name', 'label' => 'Item', 'type' => 'identity', 'code' => 'code', 'hue' => 'hue', 'box' => true],
-            ['key' => 'category', 'label' => 'Category'],
+            ['key' => 'category', 'label' => 'Category', 'lines' => 2],
             ['key' => 'unit', 'label' => 'Unit'],
             ['key' => 'location', 'label' => 'Location'],
             ['key' => 'batches', 'label' => 'Batches', 'type' => 'integer'],
