@@ -26,13 +26,13 @@ class ImportMasterAtkTest extends TestCase
         $this->assertSame(1, Item::count());
 
         $this->artisan('sstock:import-master-atk', ['--apply' => true])->assertSuccessful();
-        $this->assertSame(126, Item::count());  // 127 baris unik 126 + 1 lama, "BOX FILE" dilewati
+        $this->assertSame(127, Item::count());  // 127 baris Excel; "BOX FILE" lama dilewati, TALI RAFIA ATK dan RT dua barang
         $this->assertSame(1, Item::whereRaw('upper(name) like ?', ['BOX%FILE'])->count());
         $this->assertSame(5000.0, $old->fresh()->unit_price);
         $this->assertSame(Item::count(), Batch::count());
         $this->assertNotNull(Category::where('code', 'RT')->first());
 
         $this->artisan('sstock:import-master-atk', ['--apply' => true])->assertSuccessful();
-        $this->assertSame(126, Item::count());
+        $this->assertSame(127, Item::count());
     }
 }

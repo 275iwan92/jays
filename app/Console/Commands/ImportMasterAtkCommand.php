@@ -9,7 +9,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 
 /* REMARK
- * Tujuan       : Memasukkan master barang dari database/data/master-atk.csv (nama, satuan, kategori). Dicek per NAMA (tanpa beda huruf besar/kecil dan spasi ganda): yang sudah ada dilewati, yang belum ada ditambah. Hanya MENAMBAH, tidak mengubah / menghapus data yang ada.
+ * Tujuan       : Memasukkan master barang dari database/data/master-atk.csv (nama, satuan, kategori). Dicek per NAMA + KATEGORI (tanpa beda huruf besar/kecil dan spasi ganda; nama sama di kategori lain dianggap barang lain): yang sudah ada dilewati, yang belum ada ditambah. Hanya MENAMBAH, tidak mengubah / menghapus data yang ada.
  *                Kategori dan satuan yang belum ada dibuat. Tanpa --apply hanya menampilkan rencana (tidak menulis apa pun). Dengan --apply semuanya dalam satu transaksi.
  * Output       : m_category, m_unit, m_item (+ batch tunggal lewat Item::register).
  * Dipakai oleh : php artisan sstock:import-master-atk [--apply].
@@ -30,7 +30,7 @@ class ImportMasterAtkCommand extends Command
         $rows = array_map('str_getcsv', file(database_path('data/master-atk.csv'), FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
         array_shift($rows);
         $norm = fn ($s) => mb_strtoupper(trim(preg_replace('/\s+/u', ' ', $s)));
-        $existing = array_flip(Item::pluck('name')->map($norm)->all());
+        $existing = array_flip(Item::with('category:id,code')->get()->map(fn ($i) => $norm($i->name).'|'.$i->category->code)->all());
         $apply = (bool) $this->option('apply');
 
         $run = function () use ($rows, $norm, &$existing, $apply) {
@@ -54,12 +54,12 @@ class ImportMasterAtkCommand extends Command
                 if (! isset($units[$unit], $cats[$cat]) || $name === '') {
                     throw new \RuntimeException("Baris tidak valid: $name / $unit / $cat");
                 }
-                if (isset($existing[$norm($name)])) {
+                if (isset($existing[$key = $norm($name).'|'.$cat])) {
                     $made['dilewati']++;
 
                     continue;
                 }
-                $existing[$norm($name)] = true;
+                $existing[$key] = true;
                 $apply && Item::register(['name' => $name, 'category_id' => $cats[$cat], 'unit' => $unit]);
                 $made['barang']++;
             }
