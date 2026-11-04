@@ -130,6 +130,17 @@ class QuickAddEndpointsTest extends TestCase
         $this->postJson(route('units.store'), ['code' => 'uji1', 'name' => 'Satuan Uji'])->assertForbidden();
     }
 
+    public function test_quick_add_url_keeps_the_hosting_subpath(): void
+    {
+        \Illuminate\Support\Facades\URL::forceRootUrl('http://host.test/jays');   // hosting di subpath (mis. Biznet /jays)
+
+        try {
+            $this->assertSame('/jays/recipients', \App\Support\QuickAdd::for('recipient', User::factory()->create())['url']);
+        } finally {
+            \Illuminate\Support\Facades\URL::forceRootUrl(null);   // status statis: jangan bocor ke tes lain
+        }
+    }
+
     public function test_guests_are_rejected(): void
     {
         $this->postJson(route('suppliers.store'), ['name' => 'X'])->assertUnauthorized();
