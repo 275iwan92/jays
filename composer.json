@@ -93,7 +93,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "../devlib",
+            "url": "../devlib-pure",
             "options": {
                 "symlink": true
             }
