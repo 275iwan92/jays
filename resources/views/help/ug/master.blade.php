@@ -152,6 +152,8 @@
 <ul class="g-list">
     <li>Dua penerima boleh bernama sama. Karena itu tombol <b>+</b> tidak menolak nama kembar untuk Penerima.</li>
     <li>Di form yang sudah disimpan tampil jumlah dokumen Pengeluaran penerima itu.</li>
+    <li><b>Penerima yang juga karyawan.</b> Di form yang sudah disimpan, tekan <b>Jika penerima ini karyawan, klik di sini</b> (tombol ini hanya untuk pemegang hak HR). Form Karyawan terbuka dengan nama dan bagian sudah terisi; lengkapi lalu tekan <b>Save</b>, dan penerima otomatis tertaut. Setelah tertaut, tombol berganti menjadi tautan <b>Karyawan: kode · nama</b>.</li>
+    <li>Daftar Penerima tampil sebagai <b>Kartu</b> (bawaan) atau <b>Daftar</b>. Penerima yang sudah karyawan berkartu bulat seperti kartu Karyawan; yang belum, berkartu pita pastel dengan tulisan <b>Bukan karyawan</b>. Warna mengikuti departemen.</li>
 </ul>
 <h4>Masalah umum</h4>
 <ul class="g-list">

@@ -1,0 +1,48 @@
+<svg class="g-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-labelledby="ug-alur-ga-t ug-alur-ga-d">
+<title id="ug-alur-ga-t">Alur GA: Kendaraan dan AC</title>
+<desc id="ug-alur-ga-d">Kendaraan: master kendaraan, lalu odometer, servis, dan dokumen dicatat sehingga status Aman, Segera, atau Terlambat tampil. AC: master AC, penjadwalan, kunjungan vendor, lalu selesai dengan foto dan temuan.</desc>
+<defs><marker id="m-ug-alur-ga" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="mk" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<text class="t b" x="20" y="24">Perawatan Kendaraan</text>
+<rect class="n n-gray" x="20" y="36" width="148" height="80" rx="10"/>
+<text class="t b" x="94.0" y="66" text-anchor="middle">Master Kendaraan</text>
+<text class="t s" x="94.0" y="83" text-anchor="middle">jenis, plat,</text>
+<text class="t s" x="94.0" y="98" text-anchor="middle">rencana perawatan</text>
+<rect class="n n-teal" x="208" y="36" width="148" height="80" rx="10"/>
+<text class="t b" x="282.0" y="66" text-anchor="middle">Catat</text>
+<text class="t s" x="282.0" y="83" text-anchor="middle">odometer, servis,</text>
+<text class="t s" x="282.0" y="98" text-anchor="middle">perpanjang dokumen</text>
+<line class="e" x1="170" y1="76.0" x2="206" y2="76.0" marker-end="url(#m-ug-alur-ga)"/>
+<rect class="n n-purple" x="396" y="36" width="148" height="80" rx="10"/>
+<text class="t b" x="470.0" y="66" text-anchor="middle">Monitoring</text>
+<text class="t s" x="470.0" y="83" text-anchor="middle">sistem menghitung</text>
+<text class="t s" x="470.0" y="98" text-anchor="middle">jatuh tempo</text>
+<line class="e" x1="358" y1="76.0" x2="394" y2="76.0" marker-end="url(#m-ug-alur-ga)"/>
+<rect class="n n-ok" x="584" y="36" width="148" height="80" rx="10"/>
+<text class="t b" x="658.0" y="66" text-anchor="middle">Aman</text>
+<text class="t s" x="658.0" y="83" text-anchor="middle">masih jauh dari</text>
+<text class="t s" x="658.0" y="98" text-anchor="middle">jatuh tempo</text>
+<line class="e" x1="546" y1="76.0" x2="582" y2="76.0" marker-end="url(#m-ug-alur-ga)"/>
+<rect class="n n-warn" x="750" y="36" width="130" height="36" rx="10"/><text class="t b" x="815" y="59" text-anchor="middle">Segera</text>
+<rect class="n n-bad" x="750" y="80" width="130" height="36" rx="10"/><text class="t b" x="815" y="103" text-anchor="middle">Terlambat</text>
+<text class="t b" x="20" y="176">Perawatan AC</text>
+<rect class="n n-gray" x="20" y="188" width="148" height="80" rx="10"/>
+<text class="t b" x="94.0" y="218" text-anchor="middle">Area, Ruang, AC</text>
+<text class="t s" x="94.0" y="235" text-anchor="middle">denah dan posisi</text>
+<text class="t s" x="94.0" y="250" text-anchor="middle">unit AC</text>
+<rect class="n n-teal" x="208" y="188" width="148" height="80" rx="10"/>
+<text class="t b" x="282.0" y="218" text-anchor="middle">Penjadwalan</text>
+<text class="t s" x="282.0" y="235" text-anchor="middle">cuci dan servis besar</text>
+<text class="t s" x="282.0" y="250" text-anchor="middle">berkala</text>
+<line class="e" x1="170" y1="228.0" x2="206" y2="228.0" marker-end="url(#m-ug-alur-ga)"/>
+<rect class="n n-purple" x="396" y="188" width="148" height="80" rx="10"/>
+<text class="t b" x="470.0" y="218" text-anchor="middle">Kunjungan vendor</text>
+<text class="t s" x="470.0" y="235" text-anchor="middle">kirim jadwal,</text>
+<text class="t s" x="470.0" y="250" text-anchor="middle">konfirmasi</text>
+<line class="e" x1="358" y1="228.0" x2="394" y2="228.0" marker-end="url(#m-ug-alur-ga)"/>
+<rect class="n n-ok" x="584" y="188" width="148" height="80" rx="10"/>
+<text class="t b" x="658.0" y="218" text-anchor="middle">Selesai</text>
+<text class="t s" x="658.0" y="235" text-anchor="middle">foto sebelum dan</text>
+<text class="t s" x="658.0" y="250" text-anchor="middle">sesudah, temuan</text>
+<line class="e" x1="546" y1="228.0" x2="582" y2="228.0" marker-end="url(#m-ug-alur-ga)"/>
+<text class="t s" x="450" y="304" text-anchor="middle">Beranda menampilkan kendaraan yang perlu tindakan dan AC yang terjadwal minggu ini.</text>
+</svg>

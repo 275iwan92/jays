@@ -1,0 +1,30 @@
+<svg class="g-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 190" role="img" aria-labelledby="ug-alur-pembelian-t ug-alur-pembelian-d">
+<title id="ug-alur-pembelian-t">Alur Pembelian</title>
+<desc id="ug-alur-pembelian-d">Permintaan Pembelian (PP) disetujui, Keputusan Pesanan memilih pemasok, Pesanan Pembelian (PO) di-Confirm dan disetujui, lalu Penerimaan Pembelian (PV) menambah stok.</desc>
+<defs><marker id="m-ug-alur-pembelian" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="mk" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="n n-in" x="20" y="40" width="140" height="84" rx="10"/>
+<text class="t b" x="90.0" y="72" text-anchor="middle">1. Permintaan (PP)</text>
+<text class="t s" x="90.0" y="89" text-anchor="middle">siapa saja meminta</text>
+<text class="t s" x="90.0" y="104" text-anchor="middle">barang dibelikan</text>
+<rect class="n n-warn" x="194" y="40" width="140" height="84" rx="10"/>
+<text class="t b" x="264.0" y="72" text-anchor="middle">2. Setujui</text>
+<text class="t s" x="264.0" y="89" text-anchor="middle">Supervisor menyetujui</text>
+<text class="t s" x="264.0" y="104" text-anchor="middle">atau menolak (alasan)</text>
+<line class="e" x1="162" y1="82.0" x2="192" y2="82.0" marker-end="url(#m-ug-alur-pembelian)"/>
+<rect class="n n-teal" x="368" y="40" width="140" height="84" rx="10"/>
+<text class="t b" x="438.0" y="72" text-anchor="middle">3. Keputusan Pesanan</text>
+<text class="t s" x="438.0" y="89" text-anchor="middle">pilih pemasok dari</text>
+<text class="t s" x="438.0" y="104" text-anchor="middle">riwayat harga beli</text>
+<line class="e" x1="336" y1="82.0" x2="366" y2="82.0" marker-end="url(#m-ug-alur-pembelian)"/>
+<rect class="n n-purple" x="542" y="40" width="140" height="84" rx="10"/>
+<text class="t b" x="612.0" y="72" text-anchor="middle">4. Pesanan (PO)</text>
+<text class="t s" x="612.0" y="89" text-anchor="middle">Confirm, Approve,</text>
+<text class="t s" x="612.0" y="104" text-anchor="middle">lalu dicetak</text>
+<line class="e" x1="510" y1="82.0" x2="540" y2="82.0" marker-end="url(#m-ug-alur-pembelian)"/>
+<rect class="n n-ok" x="716" y="40" width="140" height="84" rx="10"/>
+<text class="t b" x="786.0" y="72" text-anchor="middle">5. Penerimaan (PV)</text>
+<text class="t s" x="786.0" y="89" text-anchor="middle">barang datang, stok</text>
+<text class="t s" x="786.0" y="104" text-anchor="middle">bertambah otomatis</text>
+<line class="e" x1="684" y1="82.0" x2="714" y2="82.0" marker-end="url(#m-ug-alur-pembelian)"/>
+<text class="t s" x="450" y="160" text-anchor="middle">PP yang ditolak bisa disalin jadi draf baru. PO yang belum lengkap datang tetap terbuka sampai terpenuhi.</text>
+</svg>

@@ -27,6 +27,10 @@
 <div class="sstock-guide">
     <nav class="g-toc" aria-label="Daftar isi">
         <strong>Panduan Pengguna</strong>
+        <a href="#kenalan">0. Kenali AdminKU</a>
+        <a class="g-toc-sub" href="#kn-fitur">Apa saja yang bisa dikerjakan</a>
+        <a class="g-toc-sub" href="#kn-level">Jalur belajar berlevel</a>
+        <a class="g-toc-sub" href="#kn-alur">Alur proses antar-modul</a>
         <a href="#mulai">1. Mulai di sini</a>
         <a class="g-toc-sub" href="#hari-pertama">Urutan hari pertama</a>
         <a class="g-toc-sub" href="#saldo-awal-beda">Saldo Awal dan Penerimaan pertama</a>
@@ -118,6 +122,7 @@
         <h1>Panduan Pengguna Stoku</h1>
         <p class="g-lead">Tuntunan memakai Stoku langkah demi langkah. Bagian yang hanya bisa dipakai peran tertentu ditandai <span class="g-role">hanya Supervisor</span>. Panduan ini hanya menampilkan modul yang boleh Anda buka (peran Anda: <b>{{ $user->roleLabel() }}</b>).</p>
 
+        @include('help.ug.kenalan')
         @include('help.ug.mulai')
         @include('help.ug.dasar')
         @include('help.ug.master')

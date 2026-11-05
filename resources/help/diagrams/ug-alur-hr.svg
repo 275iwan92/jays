@@ -1,0 +1,53 @@
+<svg class="g-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-labelledby="ug-alur-hr-t ug-alur-hr-d">
+<title id="ug-alur-hr-t">Alur HR: dari kandidat sampai kedisiplinan</title>
+<desc id="ug-alur-hr-d">Kandidat didaftarkan dan dipindah antar tahap sampai Diterima, lalu dijadikan karyawan. Karyawan yang melanggar dapat menerima SP 1, SP 2, SP 3, dan PHK.</desc>
+<defs><marker id="m-ug-alur-hr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="mk" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<text class="t b" x="20" y="24">Rekrutmen</text>
+<rect class="n n-gray" x="20" y="36" width="140" height="76" rx="10"/>
+<text class="t b" x="90.0" y="72" text-anchor="middle">Daftar</text>
+<text class="t s" x="90.0" y="88" text-anchor="middle">NIK KTP jadi kunci</text>
+<rect class="n n-teal" x="194" y="36" width="140" height="76" rx="10"/>
+<text class="t b" x="264.0" y="72" text-anchor="middle">Interview 1</text>
+<text class="t s" x="264.0" y="88" text-anchor="middle">tanggal, jam, penilai</text>
+<line class="e" x1="162" y1="74.0" x2="192" y2="74.0" marker-end="url(#m-ug-alur-hr)"/>
+<rect class="n n-teal" x="368" y="36" width="140" height="76" rx="10"/>
+<text class="t b" x="438.0" y="64" text-anchor="middle">Tes</text>
+<text class="t s" x="438.0" y="81" text-anchor="middle">hasil: Lulus /</text>
+<text class="t s" x="438.0" y="96" text-anchor="middle">Tidak lulus</text>
+<line class="e" x1="336" y1="74.0" x2="366" y2="74.0" marker-end="url(#m-ug-alur-hr)"/>
+<rect class="n n-teal" x="542" y="36" width="140" height="76" rx="10"/>
+<text class="t b" x="612.0" y="64" text-anchor="middle">Interview 2</text>
+<text class="t s" x="612.0" y="81" text-anchor="middle">tahap tengah bisa</text>
+<text class="t s" x="612.0" y="96" text-anchor="middle">diatur di Setup</text>
+<line class="e" x1="510" y1="74.0" x2="540" y2="74.0" marker-end="url(#m-ug-alur-hr)"/>
+<rect class="n n-ok" x="716" y="36" width="140" height="76" rx="10"/>
+<text class="t b" x="786.0" y="64" text-anchor="middle">Diterima</text>
+<text class="t s" x="786.0" y="81" text-anchor="middle">tombol Jadikan</text>
+<text class="t s" x="786.0" y="96" text-anchor="middle">karyawan</text>
+<line class="e" x1="684" y1="74.0" x2="714" y2="74.0" marker-end="url(#m-ug-alur-hr)"/>
+<path class="e" d="M786,112 L786,152 L105,152 L105,200" fill="none" marker-end="url(#m-ug-alur-hr)"/>
+<text class="el" x="450" y="146" text-anchor="middle">data kandidat terisi otomatis</text>
+<text class="t b" x="258" y="196">Karyawan dan Kedisiplinan</text>
+<rect class="n n-in" x="20" y="204" width="170" height="100" rx="10"/>
+<text class="t b" x="105.0" y="236" text-anchor="middle">Karyawan</text>
+<text class="t s" x="105.0" y="254" text-anchor="middle">profil, pekerjaan, dokumen,</text>
+<text class="t s" x="105.0" y="268" text-anchor="middle">keluarga, kontrak</text>
+<text class="t s" x="105.0" y="284" text-anchor="middle">(peringatan kontrak habis)</text>
+<line class="e" x1="192" y1="254" x2="258" y2="254" marker-end="url(#m-ug-alur-hr)"/>
+<text class="el" x="225" y="244" text-anchor="middle">melanggar</text>
+<rect class="n" x="258" y="214" width="130" height="80" rx="10" style="fill:#f5c518;stroke:#f5c518"/>
+<text class="t b" x="323" y="248" text-anchor="middle" style="fill:#fff;font-size:17px">SP 1</text>
+<text class="t s" x="323" y="270" text-anchor="middle" style="fill:#fff;opacity:1">berlaku 6 bulan</text>
+<rect class="n" x="418" y="214" width="130" height="80" rx="10" style="fill:#f97316;stroke:#f97316"/>
+<text class="t b" x="483" y="248" text-anchor="middle" style="fill:#fff;font-size:17px">SP 2</text>
+<text class="t s" x="483" y="270" text-anchor="middle" style="fill:#fff;opacity:1">berlaku 6 bulan</text>
+<line class="e" x1="390" y1="254" x2="416" y2="254" marker-end="url(#m-ug-alur-hr)"/>
+<rect class="n" x="578" y="214" width="130" height="80" rx="10" style="fill:#db2777;stroke:#db2777"/>
+<text class="t b" x="643" y="248" text-anchor="middle" style="fill:#fff;font-size:17px">SP 3</text>
+<text class="t s" x="643" y="270" text-anchor="middle" style="fill:#fff;opacity:1">berlaku 6 bulan</text>
+<line class="e" x1="550" y1="254" x2="576" y2="254" marker-end="url(#m-ug-alur-hr)"/>
+<rect class="n" x="738" y="214" width="130" height="80" rx="10" style="fill:#dc2626;stroke:#dc2626"/>
+<text class="t b" x="803" y="248" text-anchor="middle" style="fill:#fff;font-size:17px">PHK</text>
+<text class="t s" x="803" y="270" text-anchor="middle" style="fill:#fff;opacity:1">tanggal efektif</text>
+<line class="e" x1="710" y1="254" x2="736" y2="254" marker-end="url(#m-ug-alur-hr)"/>
+</svg>

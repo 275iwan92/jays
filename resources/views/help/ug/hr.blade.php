@@ -109,6 +109,7 @@
 </ol>
 <h4>Yang perlu diperhatikan</h4>
 <ul class="g-list">
+    <li>Daftar Kedisiplinan memisahkan <b>bulan ini</b> (kartu berwarna: SP 1 kuning, SP 2 jingga, SP 3 merah muda tua, PHK merah) dari <b>bulan sebelumnya</b> (tabel dengan filter Bulan, Jenis, Status, dan Bagian).</li>
     <li>Urutan hanya disarankan: memilih jenis yang lebih tinggi dari yang disarankan (mis. langsung PHK) tetap bisa, dengan peringatan.</li>
     <li>Status: <b>Aktif</b> (dalam masa berlaku), <b>Diganti</b> (ada SP yang lebih tinggi), <b>Kedaluwarsa</b> (lewat Berlaku s/d), <b>Dicabut</b>, dan <b>Terbit</b> (PHK). Kolom <b>SP aktif</b> di daftar Karyawan menampilkan SP tertinggi yang berlaku.</li>
     <li>Surat yang sudah terbit tidak diubah. Bila keliru, buka penerbitannya, isi alasan, dan tekan <span class="g-btn">Cabut surat</span>, lalu terbitkan ulang. Nomor yang sudah dipakai tidak dipakai ulang.</li>
