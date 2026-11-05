@@ -29,12 +29,12 @@
 
 <h2 id="kenalan">0. Kenali AdminKU</h2>
 <p class="g-lead">AdminKU menyatukan pekerjaan rutin kantor dan gudang dalam satu aplikasi: stok barang, pembelian, perawatan kendaraan dan AC, serta kepegawaian. Semua dikerjakan lewat layar yang sama polanya, jadi yang Anda pelajari di satu menu langsung berguna di menu lain.</p>
-<div class="kn-hero">@include('help.diagram', ['name' => 'ug-hero', 'caption' => 'AdminKU: satu aplikasi, enam bidang kerja.'])</div>
+<div class="kn-hero">@include('help.diagram', ['name' => 'ug-hero', 'caption' => 'AdminKU: satu aplikasi untuk Stok, Pembelian, SDM, Personalia (GA), dan Laporan.'])</div>
 <p class="kn-tag">Kerja jadi rapi: catat sekali, angka dan peringatan muncul sendiri.</p>
 <ul class="g-list">
     <li><b>Stok selalu benar.</b> Sisa stok dihitung dari dokumen yang sudah dikonfirmasi, tidak bisa minus, dan setiap perubahan punya jejak.</li>
     <li><b>Peringatan datang sendiri.</b> Barang menipis, kedaluwarsa dekat, SIM dan kontrak yang hampir habis, servis kendaraan dan jadwal AC tampil di Beranda tanpa Anda mencari.</li>
-    <li><b>Persetujuan jelas.</b> Permintaan Pembelian, Pesanan Pembelian, dan Penyesuaian Stok disetujui Supervisor; pembuat dokumen tidak menyetujui dokumennya sendiri.</li>
+    <li><b>Persetujuan jelas.</b> Permintaan Pembelian, Pesanan Pembelian, dan Penyesuaian Stok disetujui Supervisor; Permintaan Pembelian tidak bisa disetujui pembuatnya sendiri.</li>
     <li><b>Hak akses per Grup.</b> Setiap orang hanya melihat menu yang perlu baginya, termasuk panduan ini.</li>
 </ul>
 
@@ -52,7 +52,7 @@
     <div class="kn-card" style="--c:#38bdf8"><h4>Perawatan AC</h4><p>Jadwal cuci dan servis besar yang rapi.</p>
         <ul><li>Area, ruang, dan posisi unit di denah</li><li>Kunjungan vendor dengan konfirmasi</li><li>Foto sebelum dan sesudah, temuan, dan biaya</li></ul>
         <span class="kn-lv">Operator</span> {!! $lk('GAM', 'ga-gam', 'Perawatan AC') !!}</div>
-    <div class="kn-card" style="--c:#ec4899"><h4>HR: Karyawan, Rekrutmen, Kedisiplinan</h4><p>Kepegawaian tanpa urusan gaji.</p>
+    <div class="kn-card" style="--c:#ec4899"><h4>SDM (HR): Karyawan, Rekrutmen, Kedisiplinan</h4><p>Kepegawaian tanpa urusan gaji.</p>
         <ul><li>Kartu karyawan dengan foto dan peringatan kontrak</li><li>Papan kanban rekrutmen, jadwal tes dan interview</li><li>SP 1, SP 2, SP 3, PHK berwarna dengan surat cetak bernomor otomatis</li></ul>
         <span class="kn-lv">Supervisor</span> {!! $lk('HRE', 'hr-hre', 'Karyawan') !!}</div>
     <div class="kn-card" style="--c:#a78bfa"><h4>Penerima yang juga Karyawan</h4><p>Satu orang, satu data.</p>

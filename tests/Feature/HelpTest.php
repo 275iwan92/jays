@@ -218,7 +218,7 @@ class HelpTest extends TestCase
     public function test_user_guide_opens_for_every_role(): void
     {
         foreach ([User::factory(), User::factory()->supervisor(), User::factory()->administrator()] as $factory) {
-            $this->actingAs($factory->create())->get(route('help.user-guide'))->assertOk()->assertSee('Panduan Pengguna Stoku')->assertSee('Cara memakai Grid');
+            $this->actingAs($factory->create())->get(route('help.user-guide'))->assertOk()->assertSee('Panduan Pengguna AdminKU')->assertSee('Cara memakai Grid');
         }
     }
 

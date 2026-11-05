@@ -1,46 +1,52 @@
-<svg class="g-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="ug-hero-t ug-hero-d">
-<title id="ug-hero-t">AdminKU: satu aplikasi untuk gudang, pembelian, GA, dan HR</title>
-<desc id="ug-hero-d">Ilustrasi AdminKU di tengah, dikelilingi enam modul: Stok, Pembelian, Kendaraan, AC, HR, dan Laporan.</desc>
+<svg class="g-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 530" role="img" aria-labelledby="ug-hero-t ug-hero-d">
+<title id="ug-hero-t">AdminKU: satu aplikasi untuk gudang, pembelian, umum (GA), dan SDM</title>
+<desc id="ug-hero-d">AdminKU di tengah, dikelilingi Stok, Pembelian, Laporan, dan SDM (HR). Di bawahnya Personalia (GA) dengan dua cabang: Kendaraan dan AC.</desc>
 <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f2a33"/><stop offset="1" stop-color="#1c5a63"/></linearGradient><radialGradient id="hc" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#0d9488"/></radialGradient></defs>
-<rect width="900" height="420" rx="18" fill="url(#hg)"/>
-<line x1="450" y1="205" x2="450" y2="83" stroke="#14b8a6" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
-<line x1="450" y1="205" x2="710" y2="144" stroke="#6366f1" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
-<line x1="450" y1="205" x2="710" y2="266" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
-<line x1="450" y1="205" x2="450" y2="327" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
-<line x1="450" y1="205" x2="190" y2="266" stroke="#ec4899" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
-<line x1="450" y1="205" x2="190" y2="144" stroke="#a78bfa" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
-<circle cx="450" cy="83" r="40" fill="#14b8a6"/>
-<circle cx="450" cy="83" r="46" fill="none" stroke="#14b8a6" stroke-opacity=".35" stroke-width="3"/>
-<g transform="translate(450,83)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-14,6 L0,14 L14,6 L14,-8 L0,-16 L-14,-8 Z M-14,-8 L0,0 L14,-8 M0,0 L0,14"/></g>
-<text x="450" y="27" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">Stok</text>
-<text x="450" y="43" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">gudang dan opname</text>
-<circle cx="710" cy="144" r="40" fill="#6366f1"/>
-<circle cx="710" cy="144" r="46" fill="none" stroke="#6366f1" stroke-opacity=".35" stroke-width="3"/>
-<g transform="translate(710,144)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-14,-12 L-8,-12 L-4,6 L10,6 L13,-6 L-6,-6 M-2,12 a2,2 0 1 0 .1,0 M9,12 a2,2 0 1 0 .1,0"/></g>
-<text x="710" y="88" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">Pembelian</text>
-<text x="710" y="104" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">PP, PO, PV</text>
-<circle cx="710" cy="266" r="40" fill="#f59e0b"/>
-<circle cx="710" cy="266" r="46" fill="none" stroke="#f59e0b" stroke-opacity=".35" stroke-width="3"/>
-<g transform="translate(710,266)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-15,4 L-12,-6 L-6,-12 L8,-12 L13,-6 L16,4 Z M-9,10 a3,3 0 1 0 .1,0 M9,10 a3,3 0 1 0 .1,0"/></g>
-<text x="710" y="332" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">Kendaraan</text>
-<text x="710" y="348" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">servis dan dokumen</text>
-<circle cx="450" cy="327" r="40" fill="#38bdf8"/>
-<circle cx="450" cy="327" r="46" fill="none" stroke="#38bdf8" stroke-opacity=".35" stroke-width="3"/>
-<g transform="translate(450,327)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M0,-15 L0,15 M-13,-7 L13,7 M-13,7 L13,-7"/></g>
-<text x="450" y="393" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">AC</text>
-<text x="450" y="409" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">jadwal dan vendor</text>
-<circle cx="190" cy="266" r="40" fill="#ec4899"/>
-<circle cx="190" cy="266" r="46" fill="none" stroke="#ec4899" stroke-opacity=".35" stroke-width="3"/>
-<g transform="translate(190,266)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M0,-8 a6,6 0 1 0 .1,0 M-13,14 C-13,3 13,3 13,14"/></g>
-<text x="190" y="332" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">HR</text>
-<text x="190" y="348" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">karyawan, SP</text>
-<circle cx="190" cy="144" r="40" fill="#a78bfa"/>
-<circle cx="190" cy="144" r="46" fill="none" stroke="#a78bfa" stroke-opacity=".35" stroke-width="3"/>
-<g transform="translate(190,144)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-13,13 L-13,-2 M-4,13 L-4,-12 M5,13 L5,3 M14,13 L14,-6"/></g>
-<text x="190" y="88" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">Laporan</text>
-<text x="190" y="104" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">angka siap baca</text>
-<circle cx="450" cy="205" r="74" fill="url(#hc)"/>
-<circle cx="450" cy="205" r="86" fill="none" stroke="#2dd4bf" stroke-opacity=".35" stroke-width="3"/>
-<text x="450" y="203" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="30" font-weight="800">AdminKU</text>
-<text x="450" y="227" text-anchor="middle" fill="#e6fffb" font-family="system-ui,sans-serif" font-size="13" letter-spacing="2">KERJA JADI RAPI</text>
+<rect width="900" height="530" rx="18" fill="url(#hg)"/>
+<line x1="450" y1="200" x2="160" y2="110" stroke="#14b8a6" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
+<line x1="450" y1="200" x2="740" y2="110" stroke="#6366f1" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
+<line x1="450" y1="200" x2="160" y2="290" stroke="#ec4899" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
+<line x1="450" y1="200" x2="740" y2="290" stroke="#a78bfa" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
+<line x1="450" y1="200" x2="450" y2="350" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3 6" opacity=".8"/>
+<line x1="450" y1="350" x2="330" y2="450" stroke="#fb923c" stroke-width="2.5" opacity=".9"/>
+<line x1="450" y1="350" x2="570" y2="450" stroke="#38bdf8" stroke-width="2.5" opacity=".9"/>
+<circle cx="160" cy="110" r="40" fill="#14b8a6"/>
+<circle cx="160" cy="110" r="46" fill="none" stroke="#14b8a6" stroke-opacity=".35" stroke-width="3"/>
+<g transform="translate(160,110) scale(1.00)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-14,6 L0,14 L14,6 L14,-8 L0,-16 L-14,-8 Z M-14,-8 L0,0 L14,-8 M0,0 L0,14"/></g>
+<text x="160" y="174" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">Stok</text>
+<text x="160" y="191" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">gudang dan opname</text>
+<circle cx="740" cy="110" r="40" fill="#6366f1"/>
+<circle cx="740" cy="110" r="46" fill="none" stroke="#6366f1" stroke-opacity=".35" stroke-width="3"/>
+<g transform="translate(740,110) scale(1.00)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-14,-12 L-8,-12 L-4,6 L10,6 L13,-6 L-6,-6 M-2,12 a2,2 0 1 0 .1,0 M9,12 a2,2 0 1 0 .1,0"/></g>
+<text x="740" y="174" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">Pembelian</text>
+<text x="740" y="191" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">PP, PO, PV</text>
+<circle cx="160" cy="290" r="40" fill="#ec4899"/>
+<circle cx="160" cy="290" r="46" fill="none" stroke="#ec4899" stroke-opacity=".35" stroke-width="3"/>
+<g transform="translate(160,290) scale(1.00)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M0,-8 a6,6 0 1 0 .1,0 M-13,14 C-13,3 13,3 13,14"/></g>
+<text x="160" y="354" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">SDM (HR)</text>
+<text x="160" y="371" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">karyawan, rekrutmen, SP</text>
+<circle cx="740" cy="290" r="40" fill="#a78bfa"/>
+<circle cx="740" cy="290" r="46" fill="none" stroke="#a78bfa" stroke-opacity=".35" stroke-width="3"/>
+<g transform="translate(740,290) scale(1.00)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-13,13 L-13,-2 M-4,13 L-4,-12 M5,13 L5,3 M14,13 L14,-6"/></g>
+<text x="740" y="354" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">Laporan</text>
+<text x="740" y="371" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">angka siap baca</text>
+<circle cx="450" cy="350" r="40" fill="#f59e0b"/>
+<circle cx="450" cy="350" r="46" fill="none" stroke="#f59e0b" stroke-opacity=".35" stroke-width="3"/>
+<g transform="translate(450,350) scale(1.00)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-14,14 L-14,-10 L0,-16 L14,-10 L14,14 Z M-5,14 L-5,4 L5,4 L5,14"/></g>
+<text x="506" y="348" fill="#fff" font-family="system-ui,sans-serif" font-size="16" font-weight="700">Personalia (GA)</text>
+<text x="506" y="366" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">perawatan fasilitas kantor</text>
+<circle cx="330" cy="450" r="30" fill="#fb923c"/>
+<circle cx="330" cy="450" r="36" fill="none" stroke="#fb923c" stroke-opacity=".35" stroke-width="3"/>
+<g transform="translate(330,450) scale(0.75)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M-15,4 L-12,-6 L-6,-12 L8,-12 L13,-6 L16,4 Z M-9,10 a3,3 0 1 0 .1,0 M9,10 a3,3 0 1 0 .1,0"/></g>
+<text x="330" y="504" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">Kendaraan</text>
+<text x="330" y="521" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">servis dan dokumen</text>
+<circle cx="570" cy="450" r="30" fill="#38bdf8"/>
+<circle cx="570" cy="450" r="36" fill="none" stroke="#38bdf8" stroke-opacity=".35" stroke-width="3"/>
+<g transform="translate(570,450) scale(0.75)" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M0,-15 L0,15 M-13,-7 L13,7 M-13,7 L13,-7"/></g>
+<text x="570" y="504" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="700">AC</text>
+<text x="570" y="521" text-anchor="middle" fill="#cfe9ee" font-family="system-ui,sans-serif" font-size="12">jadwal dan vendor</text>
+<circle cx="450" cy="200" r="74" fill="url(#hc)"/>
+<circle cx="450" cy="200" r="86" fill="none" stroke="#2dd4bf" stroke-opacity=".35" stroke-width="3"/>
+<text x="450" y="198" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="30" font-weight="800">AdminKU</text>
+<text x="450" y="222" text-anchor="middle" fill="#e6fffb" font-family="system-ui,sans-serif" font-size="13" letter-spacing="2">KERJA JADI RAPI</text>
 </svg>

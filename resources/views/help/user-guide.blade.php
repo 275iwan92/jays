@@ -1,5 +1,5 @@
 {{-- REMARK
- Tujuan       : User's Guide (UG) Stoku, Bahasa Indonesia, untuk SEMUA pengguna yang sudah login: peta "Mulai di sini", peran, cara memakai grid dan form, satu bagian per modul (Untuk apa, Siapa yang bisa, Langkah, Yang perlu diperhatikan, Masalah umum), istilah, dan pertanyaan umum.
+ Tujuan       : User's Guide (UG) AdminKU, Bahasa Indonesia, untuk SEMUA pengguna yang sudah login: peta "Mulai di sini", peran, cara memakai grid dan form, satu bagian per modul (Untuk apa, Siapa yang bisa, Langkah, Yang perlu diperhatikan, Masalah umum), istilah, dan pertanyaan umum.
                 Halaman dokumentasi murni: HTML biasa (kelas sstock-guide di resources/css/app.css), tidak lewat kamus Indonesian; istilah dan nama tombol ditulis sama persis dengan label di layar.
                 Isi dipecah per bagian di resources/views/help/ug/*.blade.php (mulai, dasar, master, transaksi, laporan, ga, hr, keamanan, istilah, tanya); berkas ini memuat daftar isi dan menyambungkannya.
                 Bagian 9 GA (Perawatan Kendaraan dan Perawatan AC, kode modul GV* dan GA*) memakai nama aplikasi AdminKU dan perusahaan Jays; bagian lama belum diganti mereknya.
@@ -76,7 +76,7 @@
             @if ($can('R-ADJ'))<a class="g-toc-sub" href="#r-adj">Laporan Opname &amp; Penyesuaian</a>@endif
         @endif
         @if ($anyGa)
-            <a href="#ga">9. GA</a>
+            <a href="#ga">9. Personalia (GA)</a>
             <a class="g-toc-sub" href="#ga-hak">Siapa boleh apa di GA</a>
             <a class="g-toc-sub" href="#ga-status">Arti Aman, Segera, dan Terlambat</a>
             @if ($can('GVM'))<a class="g-toc-sub" href="#ga-gvm">Monitoring Kendaraan</a><a class="g-toc-sub" href="#ga-detail">Detail kendaraan</a>@endif
@@ -95,7 +95,7 @@
             @if ($can('GAP'))<a class="g-toc-sub" href="#ga-gap">Pengaturan GA</a>@endif
         @endif
         @if ($anyHr)
-            <a href="#hr">9a. HR</a>
+            <a href="#hr">9a. SDM (HR)</a>
             @if ($can('HRE'))<a class="g-toc-sub" href="#hr-hre">Karyawan</a>@endif
             @if ($can('HRR'))<a class="g-toc-sub" href="#hr-hrr">Rekrutmen</a>@endif
             @if ($can('HRD'))<a class="g-toc-sub" href="#hr-hrd">Kedisiplinan</a>@endif
@@ -119,8 +119,8 @@
     </nav>
 
     <main class="g-body">
-        <h1>Panduan Pengguna Stoku</h1>
-        <p class="g-lead">Tuntunan memakai Stoku langkah demi langkah. Bagian yang hanya bisa dipakai peran tertentu ditandai <span class="g-role">hanya Supervisor</span>. Panduan ini hanya menampilkan modul yang boleh Anda buka (peran Anda: <b>{{ $user->roleLabel() }}</b>).</p>
+        <h1>Panduan Pengguna AdminKU</h1>
+        <p class="g-lead">Tuntunan memakai AdminKU langkah demi langkah. Bagian yang hanya bisa dipakai peran tertentu ditandai <span class="g-role">hanya Supervisor</span>. Panduan ini hanya menampilkan modul yang boleh Anda buka (peran Anda: <b>{{ $user->roleLabel() }}</b>).</p>
 
         @include('help.ug.kenalan')
         @include('help.ug.mulai')
