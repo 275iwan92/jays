@@ -36,12 +36,10 @@
 
 @if ($cards)
     <script>
-        {{-- Kartu terkunci: tampilkan dialog DevLib; kontak sales dari config sstock.sales. --}}
+        {{-- Kartu terkunci: dialog DevLib berisi ajakan hubungi sales (tanpa kontak: nomor sales berbeda-beda). --}}
         (() => {
-            const sales = @json(config('sstock.sales'));
-            const show = () => Devlib.confirm({title: 'Modul Keuangan (versi Pro)', tone: 'info', cancel: 'Tutup', ok: sales.url ? 'Hubungi sales' : 'OK',
-                message: 'Modul Keuangan tersedia di versi Pro. Upgrade ke versi Pro: hubungi sales kami' + (sales.label ? ' (' + sales.label + ').' : sales.url ? '.' : '. (Kontak sales belum diatur.)')
-            }).then(ok => { if (ok && sales.url) window.open(sales.url, '_blank', 'noopener'); });
+            const show = () => Devlib.confirm({title: 'Modul Keuangan (versi Pro)', tone: 'info', cancel: 'Tutup', ok: 'OK',
+                message: 'Modul Keuangan tersedia di versi Pro. Upgrade ke versi Pro: hubungi sales kami.'});
             document.addEventListener('click', e => { if (e.target.closest('[data-pro-lock]')) show(); });
             document.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.closest?.('[data-pro-lock]')) { e.preventDefault(); show(); } });
         })();
