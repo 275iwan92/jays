@@ -23,7 +23,7 @@ class UnitController extends Controller
     public function index()
     {
         $rows = Unit::query()->withCount('items')->with('conversions')->orderBy('code')->get()->map(fn (Unit $u) => [
-            'id' => $u->id, 'code' => $u->code, 'name' => $u->name, 'kind' => Unit::KINDS[$u->kind] ?? $u->kind, 'hue' => Palette::unit($u->kind), 'items' => $u->items_count, 'active' => $u->is_active,
+            'id' => $u->id, 'code' => $u->code, 'name' => $u->name, 'kind' => Unit::KINDS[$u->kind] ?? $u->kind, 'hue' => Palette::unit($u->kind), 'icon' => ['count' => 'fa-boxes-stacked', 'weight' => 'fa-weight-hanging', 'length' => 'fa-ruler', 'volume' => 'fa-droplet', 'area' => 'fa-vector-square'][$u->kind] ?? 'fa-shapes', 'items' => $u->items_count, 'active' => $u->is_active,
             'conv' => $u->conversions->map(fn ($c) => '1 '.$u->code.' = '.Locale::decimal($c->factor, 6).' '.$c->to_unit)->implode('; '),
         ])->all();
 
