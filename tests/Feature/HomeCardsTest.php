@@ -41,8 +41,17 @@ class HomeCardsTest extends TestCase
         return array_column($res->viewData('cards'), 'code');
     }
 
+    public function test_locked_finance_card_tells_to_upgrade_and_contact_sales(): void
+    {
+        config(['sstock.pro_teaser' => true]);
+        $html = $this->actingAs(User::factory()->administrator()->create())->get(route('home'))->assertOk()->getContent();
+        $this->assertStringContainsString('data-pro-lock', $html);
+        $this->assertStringContainsString('Fitur ini belum ada di versi ini, upgrade ke versi Pro. Hubungi Sales Anda.', $html);
+    }
+
     public function test_every_role_gets_the_home_and_only_the_cards_it_may_open(): void
     {
+        config(['sstock.pro_teaser' => false]);   // kartu Keuangan terkunci (teaser Pro) diuji di tes sendiri
         $this->assertSame(['STB'], $this->codes(User::factory()->create()));
         $this->assertSame(['STB'], $this->codes(User::factory()->supervisor()->create()));
         $this->assertSame(['STB', 'GVM', 'GAM'], $this->codes(User::factory()->administrator()->create()));
