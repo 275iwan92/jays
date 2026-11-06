@@ -9,14 +9,17 @@
 @extends('layout', ['title' => 'Home', 'bodyClass' => 'sstock-bare'])
 @section('body')
     {{-- Help & support (semua peran) membuka User's Guide; Technical Guide hanya tampil sebagai tab untuk Administrator. --}}
-    <x-dl::layer-shell :classic="false" :without="['chat', 'ai', 'theme']" :help-url="route('help.user-guide')" :modules="$modules" :user="$user" :logout-action="route('logout')" :open="$open" :fresh="$fresh" menu-source="App\Support\Menu">
+    <x-dl::layer-shell :classic="false" :without="['chat', 'ai']" :help-url="route('help.user-guide')" :modules="$modules" :user="$user" :logout-action="route('logout')" :open="$open" :fresh="$fresh" menu-source="App\Support\Menu">
         <x-slot:dashboard>
             @include('partials.flash')
             @include('partials.home-hero', ['hero' => $hero])
             @include('partials.home-cards', ['cards' => $cards, 'phone' => false])
             @include('partials.home-welcome')
         </x-slot:dashboard>
+        {{-- Setup: bagian Musik dan Animasi layar (data-lm-in=setup) bersama Tema dan Bahasa DevLib; pemutar + kredit di partials.music. --}}
+        <x-slot:profilePages>@include('partials.music-page')</x-slot:profilePages>
     </x-dl::layer-shell>
+    @include('partials.music')
     {{-- Jendela / layar sempit tanpa pilihan tampilan (mis. login lewat tab lama atau mode Responsive DevTools): pindah ke Tampilan HP di Beranda juga (auto); hanya Beranda, tab-tab di dalamnya adalah iframe. --}}
     <x-dl::phone-offer :action="route('ui.set')" auto />
     {{-- Kartu modul ber-data-open-tab membuka menu yang sama sebagai tab kerja Layer Shell (pesan open-tab ke Shell). --}}
