@@ -37,6 +37,7 @@ final class HomeCards
                 $stock ? self::stock($user, (int) $below) : null,
                 $fleet ? self::vehicles($fleet) : null,
                 $user->canAccess('GAM') ? self::ac() : null,
+                self::proTeaser(),
             ])),
         ];
     }
@@ -106,6 +107,12 @@ final class HomeCards
             ['value' => Locale::number($c['late'], 0), 'label' => 'Terlambat', 'alert' => $c['late'] > 0],
             ['value' => Locale::number($c['week'], 0), 'label' => 'Minggu ini'],
         ]);
+    }
+
+    /** Promosi upgrade: kartu Keuangan terkunci (modulnya tidak ada di Jays; klik hanya menampilkan dialog hubungi sales). Nonaktif bila config sstock.pro_teaser = false. */
+    private static function proTeaser(): ?array
+    {
+        return config('sstock.pro_teaser') ? self::card('PRO-FIN', 'Keuangan', 'fa-solid fa-lock', 'slate', 'Tersedia di versi Pro', []) + ['locked' => true] : null;
     }
 
     private static function card(string $code, string $title, string $icon, string $tone, string $link, array $stats): array
