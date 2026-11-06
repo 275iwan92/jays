@@ -522,3 +522,9 @@ html[data-gaya="baru"] .sstock-hero__btn::after { content: ''; position: absolut
 /* Penanda produk demo (SSTOCK_DEMO=true): lencana kecil di pojok kanan bawah dan catatan di layar masuk. Tidak menangkap klik. */
 .adminku-demo-badge { position: fixed; right: 10px; bottom: 10px; z-index: 2147483000; padding: 2px 9px; border-radius: 999px; background: #E8613D; color: #fff; font: 700 11px/18px system-ui, sans-serif; letter-spacing: .08em; opacity: .92; pointer-events: none; }
 .adminku-demo-note { margin: 10px 0 0; text-align: center; font-size: 12px; font-weight: 600; color: #E8613D; }
+
+/* Beranda: tanpa tulisan "Belum ada menu terbuka" di bilah tab kosong (teks bawaan DevLib); saklar Animasi naik ke bilah tab, tersembunyi saat bilah berisi tab. */
+.dl-tabbar:empty::before { content: none; }
+.sstock-gaya.is-bar { position: absolute; top: 5px; left: 12px; z-index: 5; margin: 0; padding: 2px; }
+.sstock-gaya.is-bar button { min-height: 28px; padding: 0 12px; font-size: 12.5px; }
+.dl-tabbar:not(:empty) ~ .sstock-gaya.is-bar { display: none; }
