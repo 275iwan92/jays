@@ -41,6 +41,15 @@ final class Opening
     // Tabel master yang dihitung: kode modul => tabel.
     private const MASTER_TABLES = ['ITM' => 'm_item', 'SUP' => 'm_supplier', 'DEP' => 'm_department', 'RCP' => 'm_recipient', 'UOM' => 'm_unit', 'CAT' => 'm_category', 'LOC' => 'm_location'];
 
+    // Warna ubin per layar (hue konsisten di semua layar pembuka); kode yang tidak terdaftar memakai HUES menurut crc32 kodenya, jadi tetap konsisten.
+    private const HUES = ['green', 'blue', 'purple', 'coral', 'amber', 'pink', 'teal', 'steel'];
+    private const HUE_OF = ['ITM' => 'green', 'SUP' => 'blue', 'DEP' => 'purple', 'RCP' => 'coral', 'UOM' => 'amber', 'CAT' => 'pink', 'LOC' => 'teal', 'CMP' => 'steel'];
+
+    private static function hue(string $code): string
+    {
+        return self::HUE_OF[$code] ?? self::HUES[crc32($code) % count(self::HUES)];
+    }
+
     private const REPORT_NOTES = ['R-CARD' => 'Riwayat satu barang', 'R-SUM' => 'Saldo dan nilai', 'R-IN' => 'Per periode', 'R-OUT' => 'Per periode', 'R-ADJ' => 'Per periode'];
 
     /** Alamat layar pembuka suatu induk menu. */
@@ -90,7 +99,7 @@ final class Opening
         }
 
         $page['tiles'] = $children->map(fn ($c) => [
-            'code' => $c['code'], 'label' => $c['label'], 'icon' => $c['icon'], 'url' => $c['url'], 'badge' => $c['badge'] ?? null,
+            'code' => $c['code'], 'hue' => self::hue($c['code']), 'label' => $c['label'], 'icon' => $c['icon'], 'url' => $c['url'], 'badge' => $c['badge'] ?? null,
             'soon' => str_contains($c['url'], '/segera/'), 'write' => $user->canWrite($c['code']),
         ] + ($facts[$c['code']] ?? ['n' => null, 'note' => self::REPORT_NOTES[$c['code']] ?? '']))->all();
         $page['write'] = $children->contains(fn ($c) => $user->canWrite($c['code']));
