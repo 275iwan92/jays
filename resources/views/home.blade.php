@@ -14,6 +14,7 @@
             @include('partials.flash')
             @include('partials.home-hero', ['hero' => $hero])
             @include('partials.home-cards', ['cards' => $cards, 'phone' => false])
+            @include('partials.home-welcome')
         </x-slot:dashboard>
     </x-dl::layer-shell>
     {{-- Jendela / layar sempit tanpa pilihan tampilan (mis. login lewat tab lama atau mode Responsive DevTools): pindah ke Tampilan HP di Beranda juga (auto); hanya Beranda, tab-tab di dalamnya adalah iframe. --}}
