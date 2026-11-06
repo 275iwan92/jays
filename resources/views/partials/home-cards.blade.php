@@ -18,7 +18,14 @@
                 <section class="sstock-mod sstock-mod--{{ $c['tone'] }} sstock-link" data-pro-lock role="button" tabindex="0" aria-label="Keuangan (Pro, terkunci)" style="opacity:.75">
                     <h3 class="sstock-mod__title"><i class="{{ $c['icon'] }}" aria-hidden="true"></i> {{ $c['title'] }} <span class="dl-badge" style="margin-left:6px;font-size:11px;padding:1px 8px;border-radius:99px;background:var(--dl-accent);color:#fff">Pro</span></h3>
                     <p style="margin:0;font-size:13px;opacity:.8">Fitur ini belum ada di versi ini, upgrade ke versi Pro. Hubungi Sales Anda.</p>
-                    <span class="sstock-mod__go">{{ $c['link'] }} <i class="fa-solid fa-lock" aria-hidden="true"></i></span>
+                    @if (array_sum(array_column($c['bar'], 0)) > 0)
+                    <div class="sstock-mod__bar" role="img" aria-label="{{ collect($c['bar'])->filter(fn ($b) => $b[0] > 0)->map(fn ($b) => $b[2].': '.\Devlib\Locale::number($b[0], 0))->implode('; ') }}">
+                        @foreach ($c['bar'] as [$v, $k, $t])
+                            @if ($v > 0)<u class="is-{{ $k }}" style="flex: {{ $v }}" title="{{ $t }}"></u>@endif
+                        @endforeach
+                    </div>
+                @endif
+                <span class="sstock-mod__go">{{ $c['link'] }} <i class="fa-solid fa-lock" aria-hidden="true"></i></span>
                 </section>
                 @continue
             @endif

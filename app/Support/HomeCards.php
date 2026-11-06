@@ -54,6 +54,7 @@ final class HomeCards
 
     private static function stock(User $user, int $below): array
     {
+        $active = Item::query()->where('is_active', true)->count();
         if ($user->isSupervisor()) {
             $value = round((float) (Batch::query()->selectRaw('SUM(stock_qty * avg_cost) v')->value('v') ?? 0), 2);
             $third = ['value' => self::shortMoney($value), 'label' => 'Nilai stok', 'title' => 'Rp '.Locale::number($value, 0)];
@@ -62,10 +63,10 @@ final class HomeCards
         }
 
         return self::card('STB', 'Stok', 'fa-solid fa-boxes-packing', 'teal', 'Beranda Stok', [
-            ['value' => Locale::number(Item::query()->where('is_active', true)->count(), 0), 'label' => 'Barang aktif'],
+            ['value' => Locale::number($active, 0), 'label' => 'Barang aktif'],
             $third,
             ['value' => Locale::number($below, 0), 'label' => 'Pesan ulang', 'alert' => $below > 0],
-        ]);
+        ], [[max(0, $active - $below), 'ok', 'Di atas titik pesan ulang'], [$below, 'bad', 'Di / di bawah titik pesan ulang']]);
     }
 
     /** @return array{active: int, late: int, soon: int} */
@@ -83,7 +84,7 @@ final class HomeCards
             ['value' => Locale::number($f['active'], 0), 'label' => 'Aktif'],
             ['value' => Locale::number($f['late'], 0), 'label' => 'Terlambat', 'alert' => $f['late'] > 0],
             ['value' => Locale::number($f['soon'], 0), 'label' => 'Segera', 'alert' => $f['soon'] > 0],
-        ]);
+        ], [[max(0, $f['active'] - $f['late'] - $f['soon']), 'ok', 'Aman'], [$f['soon'], 'warn', 'Segera'], [$f['late'], 'bad', 'Terlambat']]);
     }
 
     /** @return array{units: int, late: int, week: int} */
@@ -106,7 +107,7 @@ final class HomeCards
             ['value' => Locale::number($c['units'], 0), 'label' => 'AC'],
             ['value' => Locale::number($c['late'], 0), 'label' => 'Terlambat', 'alert' => $c['late'] > 0],
             ['value' => Locale::number($c['week'], 0), 'label' => 'Minggu ini'],
-        ]);
+        ], [[max(0, $c['units'] - $c['late']), 'ok', 'Aman'], [$c['late'], 'bad', 'Terlambat']]);
     }
 
     /** Promosi upgrade: kartu Keuangan terkunci (modulnya tidak ada di Jays; klik hanya menampilkan dialog hubungi sales). Nonaktif bila config sstock.pro_teaser = false. */
@@ -115,8 +116,9 @@ final class HomeCards
         return config('sstock.pro_teaser') ? self::card('PRO-FIN', 'Keuangan', 'fa-solid fa-lock', 'slate', 'Belum ada di versi ini', []) + ['locked' => true] : null;
     }
 
-    private static function card(string $code, string $title, string $icon, string $tone, string $link, array $stats): array
+    /** $bar = batang proporsi tipis di bawah angka: [[nilai, kelas warna (ok|warn|bad|in|out|info), keterangan], ...]; nilai 0 = segmen tak digambar. */
+    private static function card(string $code, string $title, string $icon, string $tone, string $link, array $stats, array $bar = []): array
     {
-        return compact('code', 'title', 'icon', 'tone', 'link', 'stats');
+        return compact('code', 'title', 'icon', 'tone', 'link', 'stats', 'bar');
     }
 }
